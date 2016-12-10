@@ -60,7 +60,7 @@ gulp.task('cssPrep', function() {
 			cssnano()
 	]))
 	.on('error', gutil.log)
-		.pipe(gulp.dest(themeDirectory + '/c'))
+		.pipe(gulp.dest(themeDirectory))
 		.pipe(livereload());
 });
 
