@@ -1,0 +1,227 @@
+$subnavUlTop: 60vh;
+$subnavUlHeight: 30vh;
+
+#subheader-background {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 38px;
+	background-color: $offwhite;
+}
+
+#subheader-container {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(249, 249, 249, .95);
+	z-index: 1;
+	display: none;
+	opacity: 0;
+
+	@media $medium {
+		display: block;
+		opacity: 1;
+		height: auto;
+		background-color: transparent;
+		top: 60px;
+		margin-bottom: 5rem;
+	}
+} /* #subheader-container */
+
+#subheader-container.active {
+	display: block;
+}
+
+	
+#subheader-button {
+	@mixin button;
+	position: absolute;
+	top: $headerHeight;
+	margin-top: 30px;
+	display: block;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+	@media $medium {
+		display: none;
+	}
+}
+
+#subheader-button.hidden {
+	display: none;
+}
+
+
+
+nav.subheader-main {
+	
+	span {
+		font-style: normal;
+	}
+
+	height: 100vh;
+	padding-top: $headerHeight;
+	background-color: rgba(249, 249, 249, 0.1);
+
+	@media $medium {
+		background-color: transparent;
+		padding-top: 0;
+		height: auto;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		height: 50vh;
+		justify-content: space-around;
+
+		@media $medium {
+			height: auto;
+			flex-direction: row;
+			color: $baseGrey;
+			justify-content: space-between;
+			align-items: center;
+			font-size: $fontSizeMedium;
+			padding: 0;
+		}
+	} /* ul */
+
+	li {
+		display: inline;
+		cursor: pointer;
+		padding: 5px;
+
+
+
+		svg {
+			width: 4px;
+			height: 8px;
+			margin: 0 0 0 2px;
+			fill:none;
+			stroke:#4D4D4F;
+			stroke-width:1.5;
+			transition-duration: $transitionDurationDefault;
+		}
+
+		img {
+			width: 48px;
+			height: 48px;
+			margin: 0 15px -20px 0;
+
+			@media $medium {
+				display: none;
+			}
+		}
+
+/* первый уровень подменю */
+		ul {
+			position: absolute;
+			margin-top: 0px;
+			left: 0;
+			top: $subnavUlTop;
+			height: $subnavUlHeight;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0;
+			display: none;
+
+			@media $medium {
+				justify-content: space-between;
+				margin-top: 10px;
+				top: auto;
+				left: 10%;
+				width: 80%;		
+				height: auto;
+				z-index: 1;
+				color: white;
+				background-color: transparent;
+			}
+		}
+
+		ul.active {
+			display: flex;
+			z-index: 999;
+
+			li {
+				margin: 0 15px;
+				padding: 0px 10px;
+				border-radius: 3px;
+				color: white;
+				border: 1px solid white;
+				text-align: center;
+
+				
+				@media $medium {
+					margin: 0;
+					border: none;
+				}
+
+			}
+			
+			li.hover {
+				color: $clearBlue;
+				background-color: $offwhite;
+			}
+
+		}
+
+	} /* li */
+
+	li.active {
+		color: $clearBlue;
+
+		svg {
+			transform: rotate(90deg);
+			stroke: $clearBlue;
+		}
+
+	}
+}
+
+/* фон отдельно, иначе его на весь экран не раздвинуть */
+div.sublevel-background {
+	
+	position: absolute;
+	height: $subnavUlHeight;
+	top: $subnavUlTop;
+	width: 100%;
+	background-color: $clearBlue;
+	box-shadow: inset 0 3px 10px -5px #000;
+	opacity: 0;
+	display: none;
+
+	@media $medium {
+		position: static;
+		height: 38px;	
+	}
+	
+}
+
+div.sublevel-background.active {
+	display: block;
+}
+
+
+/* breadcrumbs убираем в мобильной версии нафик */
+nav.breadcrumbs {
+	
+	display: none;
+	margin-top: calc($categoryHeaderHeight - 45px);
+	margin-left: calc(2.5vw + $filterWidth + $filterMargin);
+	margin-bottom: 16px;
+	font-size: $fontSizeMedium;
+
+	@media $medium {	
+		display: block;
+	}
+	
+	img {
+		width: 14px;
+		height: 13px;
+		margin: 0 5px -3px 5px;
+	}
+}/* breadrumbs */

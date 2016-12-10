@@ -1,0 +1,133 @@
+/* Basic */
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	font-family: $fontMain;
+	font-weight: $fontWeightLight;
+	overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: $baseBlack;
+	background-color: $offwhite;
+	font-family: $fontMain;
+	font-weight: $fontWeightLight;
+	font-size:1.6rem;
+	text-align: justify;
+	line-height: 160%;
+
+	@media $small {
+		font-size:1.8rem;
+		text-align: left;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: calc(100vh - $footerHeightMobile);
+	
+	@media $medium{
+		min-height: calc(100vh - $footerHeight);
+	}
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1px 2.5% 0 2.5%;
+
+	@media $medium{
+		width: 80vw;
+		padding: 1px 0 0 0;
+	}
+}
+
+.container-wide {
+	width: 100%;
+	padding: 0 2.5vw;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+
+
+/* Links */
+a {
+	color: $baseGrey;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	transition-duration: $transitionDurationDefault;
+}
+
+a:hover {
+	color: $red;
+}
+
+a.blue {
+	color: $navyBlue;
+}
+
+a.blue:hover {
+	color: $red;
+}
+
+
+
+/* Typorgaphy */
+
+h1,
+h2,
+h3 {
+	font-weight: $fontWeightLight;
+}
+
+h4,
+h5,
+h6 {
+	font-weight: $fontWeightNormal;
+	line-height: 100%;
+}
+
+h1 {
+	font-size: 3.7rem;
+	margin: 30px 0;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin: 20px 0;
+}
+
+h5 {
+	font-size: 1.5rem;
+	margin: 10px 0;
+}
+
+p {
+	hyphens: auto;
+	margin: 20px 0;
+}
+
+span {
+	font-style: italic;
+}
+
+/* svg */
+.svg-frame {
+	fill: none;
+	stroke: none;
+}

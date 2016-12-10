@@ -1,0 +1,136 @@
+/* mixins */
+
+@define-mixin ad-container $position-left $svg-margin {
+
+	display: none;
+
+	@media $large {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: absolute;
+		bottom: 0;
+		left: $position-left;
+		transform: translate();
+
+		a {	
+			display: block;
+			text-decoration: none;
+			border-bottom: none;
+			font-size: 0;
+			line-height: 0;
+		}
+
+		svg {
+			margin: 0;
+			padding: 0;
+			margin-bottom: $svg-margin;
+		}
+	}
+}
+
+@define-mixin category-section-container $background-color $margin-bottom {
+	padding: 10px 25px;
+	margin: calc($categoryHeaderHeight - 45px) 2.5vw $margin-bottom 0;
+	background-color: $background-color;
+	margin-bottom: $margin-bottom;
+	
+	@media $medium {
+		margin: 0 2.5vw $margin-bottom calc($filterWidth + $filterMargin + 2.5vw);
+	}
+}
+
+
+@define-mixin category-h2 {
+	margin: 0 auto 4rem auto;
+	text-align: center;
+	font-weight: $fontWeightBold;
+	position: relative;
+}
+
+
+@define-mixin button {
+	cursor: pointer;
+	display: block;
+	margin: 20px auto 0 auto;
+	padding: 0 10px;
+	height: 28px;
+	border: none;
+	border-radius: 3px;
+	background-color: $clearBlue;
+	color: white;
+	transition-duration: $transitionDurationDefault;
+}
+
+
+@define-mixin basic-description-container $width {
+	width: 90%;
+	margin: 0 auto;
+
+	@media @medium {
+		width: $width;
+	}
+
+	h2 {
+		@mixin category-h2;
+		margin-bottom: 0;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+
+		@media $medium {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		div {
+
+			@media $medium {
+				width: 48%;
+			}
+		}
+	} /* section */
+
+	input {
+		width: 100%;
+		padding: 7px;
+		display: block;
+		margin: 15px 0;
+		border: 1px solid $baseGrey;
+		border-radius: 3px;
+	}
+
+	textarea {
+		width: 100%;
+		padding: 7px;
+		display: block;
+		margin: 15px 0;
+		border: 1px solid $baseGrey;
+		border-radius: 3px;
+		resize: none;
+	}
+
+	button {			
+		@mixin button;
+
+		svg {
+			width: 14px;
+			height: 14px;
+			margin: 0 2px -4px 0
+		}
+	}
+
+	button:hover {
+		background-color: $lightGreen;
+	}
+}
+
+
+@define-mixin order-frame {
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-around;
+	display: flex;
+}

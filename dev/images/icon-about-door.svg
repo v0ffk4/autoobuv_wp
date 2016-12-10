@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 55 50" style="enable-background:new 0 0 55 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#F04F37;stroke-miterlimit:10;stroke-width:1.5}
+	.st2{fill:none;stroke:#4D4D4F;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1.5}
+</style>
+<rect id="marker_2_" class="st0" width="55" height="50"/>
+<g id="door">
+	<polyline class="st1" points="25.6,34.6 25.6,42.4 30.3,42.4 	"/>
+	<polygon class="st2" points="49.5,8.5 49.5,43.4 31.5,46.9 31.5,30.7 38.7,25.9 31.5,21.1 31.5,4.9 	"/>
+	<polygon class="st2" points="38.7,25.9 31.4,30.7 20.5,38 20.5,32.5 5.5,32.5 5.5,19.5 20.5,19.5 20.5,13.8 31.4,21.1 	"/>
+</g>
+</svg>

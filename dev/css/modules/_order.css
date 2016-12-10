@@ -1,0 +1,232 @@
+#order-background {
+	
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(249,249,249, .95);
+	position: fixed;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+	opacity: 0;
+	display: none;
+
+} /* #order-background */
+
+#order-background.active {
+	display: flex;
+}
+
+#order-close-btn {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+
+	.order-close {
+		fill: none;
+		stroke: $red;
+		stroke-width: 1.5;
+		transition: stroke $transitionDurationDefault ease-out;
+	}
+}
+
+#order-close-btn:hover {
+	.order-close {
+		stroke: $yellow;
+	}
+} 
+
+
+#order-container {
+	width: 500px;
+	height: 500px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: $basicShadow;
+	display: none;
+	opacity: 0;
+
+} /* #order-contaoner */
+
+#order-container.active {
+	width: 500px;
+	height: 500px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: $basicShadow;
+	display: block;
+
+} /* #order-contaoner */
+
+#order-frame-01 {
+	display: none;
+}
+
+#order-frame-01.active {
+
+	@mixin order-frame;
+
+	h2 {
+		text-align: center;
+		font-weight: $fontWeightBold;
+	}
+
+	.order-item-image {
+		margin: 0 auto;
+		width: 200px;
+		height: 200px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	p {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		font-size: $fontSizeMedium;
+		font-style: italic;
+		border: 1px solid $clearBlue;
+		border-radius: 5px;
+		padding: 15px;
+	}
+
+	.controls {
+		display: flex;
+		justify-content: center;
+
+		div{
+			display: flex;
+			margin-right: 25px;
+		}
+
+
+		svg {
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+
+			.order-arrow {
+				fill: none;
+				stroke: $clearBlue;
+				stroke-weight: 1.5;
+				transition: stroke $transitionDurationDefault;
+			}
+		} /* svg */
+
+
+		svg#order-increment-btn:hover {
+
+			.order-arrow {
+				stroke: $lightGreen;
+			}
+		} /* svg-hover */
+
+		svg#order-decrement-btn:hover {
+
+			.order-arrow {
+				stroke: $red;
+			}
+		} /* svg-hover */
+
+		svg.button-inactive {
+				
+			cursor: default;
+
+			.order-arrow {
+				stroke: $lightGrey;
+			}
+		}
+		
+		svg.button-inactive:hover {
+
+			.order-arrow {
+				stroke: $lightGrey!important;
+			}	
+		}
+
+
+		input {
+			width: 50px;
+			text-align: center;
+			font-size: 150%;
+			color: $clearBlue;
+			border: none;
+		}
+		
+		button {
+			@mixin button;
+			margin: 0;
+		}
+
+		button:hover {
+			background-color: $lightGreen;
+		}
+
+	} /* controls */
+
+} /* #order-frame-01.active */
+
+#order-frame-02 {
+	display: none;
+}
+
+#order-frame-02.active {
+	@mixin order-frame;
+	background-color: $offwhite;
+	
+	form {
+		width: 90%;
+		margin: auto;
+	}
+
+	fieldset {
+		border: none;
+		margin-bottom: 10px;
+	}
+
+	label {
+		display: block;
+		text-align: center;
+	}
+
+	h2 {
+		margin: 0;
+		color: $baseGrey;
+	}
+
+	img {
+		width: 32px;
+		height: 32px;
+		margin: 0 0 -6px 0;
+	}
+
+	input {
+		width: 100%;
+		font-size: $fontSizeLarge;
+		padding: 5px;
+		margin-top: 10px;
+		border: none;
+		border-radius: 3px;
+		box-shadow: inset 0px 3px 5px -5px black;
+	}
+
+	textarea {
+		width: 100%;
+		font-size: $fontSizeLarge;
+		height: 150px;
+		resize: none;
+		margin-top: 10px;
+		border: none;
+		border-radius: 3px;
+		box-shadow: inset 0px 3px 5px -5px black;
+	}
+
+	button {
+		@mixin button;
+	}
+
+}

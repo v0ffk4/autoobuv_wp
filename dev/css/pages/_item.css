@@ -1,0 +1,154 @@
+#item {
+
+	.item-container {
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		padding: 25px 10px;
+		margin-top: calc($categoryHeaderHeight - 45px);
+
+		@media $medium {
+			padding: 25px;
+			flex-direction: row;
+			align-items: flex-end;
+			margin-top: auto;
+		}
+
+		img {
+		width: 125px;
+		height: 168px;
+		margin: 0 auto;
+
+		@media $medium {
+			width: 250px;
+			height: 336px;
+		}
+			
+		} /* img */
+
+		.item-description {
+			margin-left: 0;
+			@media $medium {
+				margin-left: 10rem;
+				width: 100%;	
+			}
+			
+
+			h2 {
+				font-weight: $fontWeightBold;
+			}
+			
+			dt {
+				float: left;
+				margin-right: 1rem;
+			}
+
+			section {
+				display: block;
+				width: 100%;
+
+				@media $medium {
+					display: flex;
+					align-items: flex-end;
+				}
+
+				dl {
+				margin: 3rem 0 0 0;
+					@media $medium {
+					width: 40%;
+					font-size: $fontSizeMedium;
+					display: block;
+					}
+				}/* dl */ 
+
+				dt, dd {
+					padding: 0 15px;
+					border-radius: 3px;
+				}
+
+				dd {
+					text-align: right;
+					margin: 0;
+				}
+
+				dd:nth-of-type(odd) {
+					background-color: $offwhite;
+				}
+				
+				div {
+				width: 100%;
+				text-align: center;
+				
+					@media $medium {				
+						width: 60%;
+					}
+
+					h1 {
+						font-weight: $fontWeightBold;
+
+						span {
+							font-style: normal;
+							color: $red;
+							margin-left: 3px;
+						}
+					} /* h1 */
+
+					img {
+						width: 46px;
+						height: 86px;
+						display: inline-block;
+					}
+
+					button {
+						@mixin button;
+						
+						svg {
+							width: 19px;
+							height: 11px;
+							margin: 0 3px -1px 0;
+							
+							.icon-order-fill {
+								fill: white;
+								stroke: none;
+							}
+							
+							.icon-order-stroke {
+								stroke-width: $strokeWidth;
+								stroke: white;
+								fill: none;
+							} 
+
+						} /* svg */
+
+					} /* button */
+
+				} /* div */
+
+			} /* section */
+
+		} /* item description */
+
+	} /* item-container */
+
+} /* item */
+
+.item-form-container {
+	width: 100%;
+	margin: $marginDefault auto $marginDefault auto;
+
+	@media $medium {
+		width: 60%;
+	}
+
+	.description {
+		@mixin basic-description-container 80%;
+
+		p {
+			margin-bottom: $marginDefault;
+		}
+	}
+
+	section.basic-contact-form {
+		@mixin basic-description-container 60%;
+	} /* /section.category-contact-form */
+}

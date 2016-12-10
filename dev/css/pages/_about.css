@@ -1,0 +1,222 @@
+.about {
+
+	h1 {
+		text-align: center;
+		line-height: 4rem;
+		
+		@media $small {
+			line-height: auto;
+		}		
+	}
+	
+	.tagline-container {
+		margin: calc($headerHeight + 50px) auto $marginDefault auto;
+		position: relative;
+		padding: 1px 0 0 0;
+		height: auto;
+
+		@media $large {
+			background-image: url(/catalog/view/theme/autoobuv/image/bcg-about.svg);
+			background-repeat: no-repeat;
+			background-position: bottom left;
+			background-size: 590px;
+			height: 730px;
+		}
+
+		.tagline {
+			@media $large {
+				position: absolute;
+				top: 0;
+				left: 120px;
+			}
+
+			h1 {
+				text-align: left;
+			}
+
+			p {
+				font-size: 1.8rem;
+			}
+			
+			img {
+				width: 23px;
+				height: 23px;
+				margin: 0 10px -7px 0;
+			}
+
+		} /* tagline */
+
+		.advantages {
+
+			@media $large {
+				margin: 280px 0 80px 610px;
+			}
+
+			section {
+				margin: 70px auto 0 auto;
+				display: flex;
+				align-items: center;
+				width: auto;
+				
+				@media $small {
+					justify-content: center;	
+				}
+
+				@media $large {
+					justify-content: flex-start;
+				}
+			}
+
+			img {
+				width: 49px;
+				height: 49px;
+				margin-right: 20px;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			h2 {
+				margin: 0 0 0.5rem 0;
+				color: $red;
+			}
+
+		} /* advantages */
+
+	} /* tagline-container */
+
+	.extras {
+
+		margin-bottom: $marginDefault;
+
+		h1 {
+			margin-bottom: $marginDefault;
+		}
+			
+		ul {
+			padding: 0;
+
+			@media $small {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+		
+		li {
+			margin: 0 0 50px 0;
+			display: block;
+			
+			@media $small {
+				margin: 0 20px;
+				flex: 1 1 33.3333%;
+				max-width: 350px;
+			}
+		}
+
+		img {
+			display: block;
+			margin: 0 auto 25px auto;
+			width: 55px;
+			height: 50px;
+		}
+
+		h5 {
+			color: $red;
+		}
+
+		p {
+			margin: 0;
+			font-size: $fontSizeMedium;
+			line-height: 150%;
+		}
+
+	} /* extras */
+
+	.reliability {
+
+		margin-top: $marginDefault;
+		margin-bottom: 10rem;
+
+		img.cert {
+			display: block;
+			margin: 0 auto;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		p > img {
+			width: 18px;
+			height: 18px;
+			margin-bottom: -5px;
+		}
+
+	} /* reliability */
+
+	.partnership {
+
+		.logos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: $marginDefault;
+
+			@media $small {
+				justify-content: space-between;
+			}
+
+		}
+
+		img {
+			display: block;
+			margin: 0 1rem;
+			max-width: 125px;
+			flex: 1 1 25%;
+
+			@media $small {			
+				margin: 2.5rem 4rem;
+				max-width: 200px;
+			}
+		}
+
+	}
+
+} /* about */
+
+.black-stripe {
+	width: 100%;
+	height: 1px;
+	background-color: $baseBlack;
+}
+
+img.about-arrow {
+	display: block;
+	width: 66px;
+	height: 106px;
+	margin: 0 auto;
+}
+
+img.container {
+	width: 1064px;
+	height: auto;
+	display: block;
+	margin: $marginDefault auto 0 auto;
+	max-width: 90vw;
+	display: none;
+
+	@media $large {
+		display: block;
+	}
+}
+
+img.container-web {
+	display: block;
+	margin: 0 auto;
+	max-width: 90vw;
+
+	@media $large {
+		display: none;
+	}
+}

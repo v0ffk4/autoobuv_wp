@@ -1,0 +1,60 @@
+#callback {
+	position: fixed;
+	top: calc($headerHeight + 5px);
+	right: calc(10vw - 10px);
+	background-color: rgba(50, 50, 50, .9);
+	color: white;
+	padding: 10px;
+	z-index: 999;
+	text-align: right;
+	font-size: $fontSizeMedium;
+	font-style: italic;
+	border-radius:3px;
+	display: none;
+	opacity: 0;
+
+	label {
+		float: left;
+		width: 170px;
+		text-align: right;
+	}
+
+	input {
+		margin-left: 15px;
+		width: 200px;
+	}
+
+	fieldset {
+		border: none;
+		width: 100%;
+		margin: 0;
+		padding: 10px;
+	}
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		span:first-of-type {
+			margin-left: 15px;
+		}
+	}
+
+	button {
+		@mixin button;
+		margin: 20px 10px 10px auto;
+
+	}
+
+	button:hover {
+		background-color: $lightGreen;
+	}
+
+} /* #callback */
+
+#callback.active {
+
+	display: block;
+
+}

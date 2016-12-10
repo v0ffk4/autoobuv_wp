@@ -1,0 +1,64 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300,700);
+
+$fontMain: Lato, Helvetica, Arial, sans-serif;
+$fontWeightLight:		300;
+$fontWeightNormal:		400;
+$fontWeightBold:		600;
+
+$fontSizeLarge:		1.8rem;
+$fontSizeMedium:	1.5rem;
+$fontSizeSmall:		1.2rem;
+
+
+/* Colors */
+$baseBlack:			#323031;
+$baseGrey:			#4E4D50;
+$lightGrey:			#EFEFEF;
+$offwhite:			#F9F9F9;
+
+$red:				#EF4F38;
+$yellow:			#F9A533;
+
+$navyBlue:			#0089C9;
+$clearBlue:			#0088F6;
+
+$lightGreen:		#83C02C;
+$green:				#00C17A;
+
+$linkDefault:		#0089C9;
+$linkHover:			#EF4F38;
+
+$shadowColor:		#AAA3A3;
+
+
+/* SVG */
+$strokeWidth: 1.5;
+
+/* Viewports */
+$small:		screen and (min-width:600px);
+$medium:	screen and (min-width:900px);
+$large:		screen and (min-width:1200px);
+
+/* layout*/
+$containerDefaultWidth:	80%;
+$containerMaxWidth:		1200px;
+
+$marginDefault: 7.5rem;
+$marginMedium:	3.75rem;
+
+/* Elements */
+$headerHeight:			60px;
+$footerHeight:			60px;
+$footerHeightMobile:	105px;
+
+$basicShadow: 0px 5px 15px $shadowColor;
+
+/* animation */
+$transitionDurationDefault: 0.5s;
+
+/* pages */
+/* category */
+$categoryHeaderHeight:	20rem;
+$filterMargin:			25px;
+$filterWidth:			230px;
