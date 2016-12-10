@@ -23,21 +23,22 @@ var gulp = require('gulp'),
 	//define directories
 	pluginDirectory = '../wp-content/plugins',
 	themeDirectory = '../wp-content/themes/autoobuv',
-	devTpl = 'dev/',
+	devTpl = 'dev/templates/',
+	devPlg = 'dev/plugins/',
 	devImg = 'dev/images/',
 	devCss = 'dev/css/',
 	devJs = 'dev/js/'
 
 //copy templates
-gulp.task('tplMin', function () {
+gulp.task('tplCp', function () {
 	gulp.src(devTpl + '*.php')
 	.pipe(gulp.dest(themeDirectory))
 	.pipe(livereload());
 });
 
 //copy plugins
-gulp.task('tplMin', function () {
-	gulp.src(devTpl + 'kindasorta.php')
+gulp.task('plgCp', function () {
+	gulp.src(devPlg + '*.php')
 	.pipe(gulp.dest(pluginDirectory))
 	.pipe(livereload());
 });
@@ -76,10 +77,11 @@ gulp.task('jsConcat', function(){
 //watch & process
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch(devTpl + '**/*.php', ['tplMin']);
+	gulp.watch(devTpl + '**/*.php', ['tplCp']);
+	gulp.watch(devPlg + '**/*.php', ['plgCp']);
 	gulp.watch(devImg + '**/*.svg', ['svgMin']);
 	gulp.watch(devCss + '**/*.css', ['cssPrep']);	
 	gulp.watch(devJs + '*.js', ['jsConcat']);
 });
 
-gulp.task( 'default', [ 'tplMin', 'svgMin', 'cssPrep', 'jsConcat', 'watch' ] );
+gulp.task( 'default', [ 'tplCp', 'plgCp', 'svgMin', 'cssPrep', 'jsConcat', 'watch' ] );
