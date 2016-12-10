@@ -45,17 +45,17 @@ function custom_post_types(){
 
 	//common
 	$labels = array(
-	       'name'               => 'бла-бла',
-	       'singular_name'      => 'бла-бла',
-	       'menu_name'          => 'Бла-бла',
-	       'name_admin_bar'     => 'Бла-бла',
-	       'add_new'            => 'Добавить бла-бла',
-	       'add_new_item'       => 'Добавление бла-бла',
-	       'new_item'           => 'Еще бла-бла',
-	       'edit_item'          => 'Редактировать бла-бла',
-	       'view_item'          => 'Просмотр бла-бла',
-	       'all_items'          => 'Все бла-бла',
-	       'search_items'       => 'Искать среди бла-бла',
+	       'name'               => 'Главная',
+	       'singular_name'      => 'главная',
+	       'menu_name'          => 'главная',
+	       'name_admin_bar'     => 'главная',
+	       'add_new'            => 'Добавить',
+	       'add_new_item'       => 'Добавить',
+	       'new_item'           => 'Добавить',
+	       'edit_item'          => 'Редактировать',
+	       'view_item'          => 'Просмотр',
+	       'all_items'          => 'Все главная',
+	       'search_items'       => 'Искать',
 	       'parent_item_colon'  => 'Parent new-items:',
 	       'not_found'          => 'Ничего не нашел :(',
 	       'not_found_in_trash' => 'В мусорке пусто.',
@@ -69,7 +69,7 @@ function custom_post_types(){
 	       'show_in_menu'       => true,
 	       'menu_icon'          => 'dashicons-format-quote',
 	       'query_var'          => true,
-	       'rewrite'            => array( 'slug' => 'common' ),
+	       'rewrite'            => array( 'slug' => 'mainpage' ),
 	       'capability_type'    => 'post',
 	       'has_archive'        => false,
 	       'hierarchical'       => false,
@@ -77,23 +77,23 @@ function custom_post_types(){
 	       'supports'           => array( 'title' )
 	   );
 
-	register_post_type('common', $args);
+	register_post_type('mainpage', $args);
 	//end common
 
 
 	//items
 	$labels = array(
-	       'name'               => 'товар',
-	       'singular_name'      => 'товар',
-	       'menu_name'          => 'Товары',
-	       'name_admin_bar'     => 'Товары',
-	       'add_new'            => 'Добавить товар',
-	       'add_new_item'       => 'Добавить товар',
-	       'new_item'           => 'Добавить товар',
+	       'name'               => 'О нас',
+	       'singular_name'      => 'О нас',
+	       'menu_name'          => 'О нас',
+	       'name_admin_bar'     => 'О нас',
+	       'add_new'            => 'Добавить',
+	       'add_new_item'       => 'Добавить',
+	       'new_item'           => 'Добавить',
 	       'edit_item'          => 'Редактировать',
-	       'view_item'          => 'Просмотр товар',
-	       'all_items'          => 'Все товары',
-	       'search_items'       => 'Искать среди товаров',
+	       'view_item'          => 'Просмотр',
+	       'all_items'          => 'Просмотр',
+	       'search_items'       => 'Искать',
 	       'parent_item_colon'  => 'Parent new-items:',
 	       'not_found'          => 'Не нашел :(',
 	       'not_found_in_trash' => 'В мусорке пусто.',
@@ -107,7 +107,7 @@ function custom_post_types(){
 	       'show_in_menu'       => true,
 	       'menu_icon'          => 'dashicons-format-gallery',
 	       'query_var'          => true,
-	       'rewrite'            => array( 'slug' => 'items' ),
+	       'rewrite'            => array( 'slug' => 'about' ),
 	       'capability_type'    => 'post',
 	       'has_archive'        => true,
 	       'hierarchical'       => false,
@@ -115,23 +115,23 @@ function custom_post_types(){
 	       'supports'           => array( 'title' )
 	   );
 
-	register_post_type('items', $args);
+	register_post_type('about', $args);
 	//end items
 
 
 	//actions
 	$labels = array(
-	       'name'               => 'Акции',
-	       'singular_name'      => 'Акции',
-	       'menu_name'          => 'Акции',
-	       'name_admin_bar'     => 'Акции',
+	       'name'               => 'Товары',
+	       'singular_name'      => 'Товары',
+	       'menu_name'          => 'Товары',
+	       'name_admin_bar'     => 'Товары',
 	       'add_new'            => 'Добавить',
-	       'add_new_item'       => 'Добавить акции',
-	       'new_item'           => 'Новая акция',
-	       'edit_item'          => 'Редактировать акции',
-	       'view_item'          => 'Просмотр акции',
-	       'all_items'          => 'Все акции',
-	       'search_items'       => 'Искать акции',
+	       'add_new_item'       => 'Добавить',
+	       'new_item'           => 'Добавить',
+	       'edit_item'          => 'Редактировать',
+	       'view_item'          => 'Просмотр',
+	       'all_items'          => 'Просмотр',
+	       'search_items'       => 'Поиск',
 	       'parent_item_colon'  => 'Parent actions:',
 	       'not_found'          => 'Не нашел :(',
 	       'not_found_in_trash' => 'В мусорке пусто.',
@@ -145,7 +145,7 @@ function custom_post_types(){
 	       'show_in_menu'       => true,
 	       'menu_icon'          => 'dashicons-star-filled',
 	       'query_var'          => true,
-	       'rewrite'            => array( 'slug' => 'actions' ),
+	       'rewrite'            => array( 'slug' => 'catalogue' ),
 	       'capability_type'    => 'post',
 	       'has_archive'        => true,
 	       'hierarchical'       => false,
@@ -153,23 +153,23 @@ function custom_post_types(){
 	       'supports'           => array( 'title' )
 	   );
 
-	register_post_type('actions', $args);
+	register_post_type('catalogue', $args);
 	//end actions
 
 
 	//shops
 	$labels = array(
-	       'name'               => 'магазины',
-	       'singular_name'      => 'магазин',
-	       'menu_name'          => 'Магазины',
-	       'name_admin_bar'     => 'Магазины',
+	       'name'               => 'Услуги',
+	       'singular_name'      => 'Услуги',
+	       'menu_name'          => 'Услуги',
+	       'name_admin_bar'     => 'Услуги',
 	       'add_new'            => 'Добавить',
-	       'add_new_item'       => 'Добавить магазин',
-	       'new_item'           => 'Новая акция',
-	       'edit_item'          => 'Редактировать магазин',
-	       'view_item'          => 'Просмотр магазин',
-	       'all_items'          => 'Все магазины',
-	       'search_items'       => 'Искать магазин',
+	       'add_new_item'       => 'Добавить',
+	       'new_item'           => 'Добавить',
+	       'edit_item'          => 'Редактировать',
+	       'view_item'          => 'Просмотр',
+	       'all_items'          => 'Просмотр',
+	       'search_items'       => 'Поиск',
 	       'parent_item_colon'  => 'Parent shop:',
 	       'not_found'          => 'Не нашел :(',
 	       'not_found_in_trash' => 'В мусорке пусто.',
@@ -183,7 +183,7 @@ function custom_post_types(){
 	       'show_in_menu'       => true,
 	       'menu_icon'          => 'dashicons-admin-multisite',
 	       'query_var'          => true,
-	       'rewrite'            => array( 'slug' => 'shops' ),
+	       'rewrite'            => array( 'slug' => 'attendance' ),
 	       'capability_type'    => 'post',
 	       'has_archive'        => false,
 	       'hierarchical'       => false,
@@ -191,23 +191,23 @@ function custom_post_types(){
 	       'supports'           => array( 'title' )
 	   );
 
-	register_post_type('shops', $args);
+	register_post_type('attendance', $args);
 	//end shops
 
 
 	//career
 	$labels = array(
-	       'name'               => 'Вакансии',
-	       'singular_name'      => 'Вакансии',
-	       'menu_name'          => 'Вакансии',
-	       'name_admin_bar'     => 'Вакансии',
+	       'name'               => 'Сервис',
+	       'singular_name'      => 'Сервис',
+	       'menu_name'          => 'Сервис',
+	       'name_admin_bar'     => 'Сервис',
 	       'add_new'            => 'Добавить',
-	       'add_new_item'       => 'Добавить вакансию',
-	       'new_item'           => 'Новая вакансия',
-	       'edit_item'          => 'Редактировать вакансию',
-	       'view_item'          => 'Просмотр вакансий',
-	       'all_items'          => 'Все вакансии',
-	       'search_items'       => 'Искать вакансии',
+	       'add_new_item'       => 'Добавить',
+	       'new_item'           => 'Добавить',
+	       'edit_item'          => 'Редактировать',
+	       'view_item'          => 'Просмотр',
+	       'all_items'          => 'Просмотр',
+	       'search_items'       => 'Поиск',
 	       'parent_item_colon'  => 'Parent vacancies:',
 	       'not_found'          => 'Не нашел :(',
 	       'not_found_in_trash' => 'В мусорке пусто.',
@@ -221,7 +221,7 @@ function custom_post_types(){
 	       'show_in_menu'       => true,
 	       'menu_icon'          => 'dashicons-carrot',
 	       'query_var'          => true,
-	       'rewrite'            => array( 'slug' => 'career' ),
+	       'rewrite'            => array( 'slug' => 'service' ),
 	       'capability_type'    => 'post',
 	       'has_archive'        => true,
 	       'hierarchical'       => false,
@@ -229,23 +229,23 @@ function custom_post_types(){
 	       'supports'           => array( 'title' )
 	   );
 
-	register_post_type('career', $args);
+	register_post_type('service', $args);
 	//end career
 
 	
 	//partners
 	$labels = array(
-	       'name'               => 'Партнеры',
-	       'singular_name'      => 'Партнер',
-	       'menu_name'          => 'Партнеры',
-	       'name_admin_bar'     => 'Партнеры',
+	       'name'               => 'Контакты',
+	       'singular_name'      => 'Контакты',
+	       'menu_name'          => 'Контакты',
+	       'name_admin_bar'     => 'Контакты',
 	       'add_new'            => 'Добавить',
-	       'add_new_item'       => 'Добавить партнера',
-	       'new_item'           => 'Новый партнер',
-	       'edit_item'          => 'Редактировать партнера',
-	       'view_item'          => 'Просмотр партнера',
-	       'all_items'          => 'Все партнеры',
-	       'search_items'       => 'Искать партнера',
+	       'add_new_item'       => 'Добавить',
+	       'new_item'           => 'Добавить',
+	       'edit_item'          => 'Редактировать',
+	       'view_item'          => 'Просмотр',
+	       'all_items'          => 'Просмотр',
+	       'search_items'       => 'Поиск',
 	       'parent_item_colon'  => 'Parent partners:',
 	       'not_found'          => 'Не нашел :(',
 	       'not_found_in_trash' => 'В мусорке пусто.',
@@ -259,7 +259,7 @@ function custom_post_types(){
 	       'show_in_menu'       => true,
 	       'menu_icon'          => 'dashicons-image-filter',
 	       'query_var'          => true,
-	       'rewrite'            => array( 'slug' => 'partners' ),
+	       'rewrite'            => array( 'slug' => 'contacts' ),
 	       'capability_type'    => 'post',
 	       'has_archive'        => true,
 	       'hierarchical'       => false,
@@ -267,7 +267,7 @@ function custom_post_types(){
 	       'supports'           => array( 'title' )
 	   );
 
-	register_post_type('partners', $args);
+	register_post_type('contacts', $args);
 	//end end partners
 
 
