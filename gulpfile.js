@@ -21,6 +21,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 
 	//define directories
+	pluginDirectory = '../wp-content/plugins',
 	themeDirectory = '../wp-content/themes/autoobuv',
 	devTpl = 'dev/',
 	devImg = 'dev/images/',
@@ -31,6 +32,13 @@ var gulp = require('gulp'),
 gulp.task('tplMin', function () {
 	gulp.src(devTpl + '*.php')
 	.pipe(gulp.dest(themeDirectory))
+	.pipe(livereload());
+});
+
+//copy plugins
+gulp.task('tplMin', function () {
+	gulp.src(devTpl + 'kindasorta.php')
+	.pipe(gulp.dest(pluginDirectory))
 	.pipe(livereload());
 });
 
