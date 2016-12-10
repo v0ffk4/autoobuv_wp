@@ -27,12 +27,12 @@ var gulp = require('gulp'),
 	devCss = 'dev/css/',
 	devJs = 'dev/js/'
 
+//copy templates
 gulp.task('tplMin', function () {
 	gulp.src(devTpl + '*.php')
 	.pipe(gulp.dest(themeDirectory))
 	.pipe(livereload());
 });
-
 
 //svg minify
 gulp.task('svgMin', function () {
