@@ -84,4 +84,50 @@ gulp.task('watch', function() {
 	gulp.watch(devJs + '*.js', ['jsConcat']);
 });
 
-gulp.task( 'default', [ 'tplCp', 'plgCp', 'svgMin', 'cssPrep', 'jsConcat', 'watch' ] );
+gulp.task( 'v0ffk4', [ 'tplCp', 'plgCp', 'svgMin', 'cssPrep', 'jsConcat', 'watch' ] );
+
+//mihru
+//copy templates
+gulp.task('tplCpMihru', function () {
+	gulp.src(devTpl + '*.php')
+	.pipe(gulp.dest(themeDirectory))
+});
+
+//copy plugins
+gulp.task('plgCpMihru', function () {
+	gulp.src(devPlg + '*.php')
+	.pipe(gulp.dest(pluginDirectory))
+});
+
+//compile SASS synthax / minify
+gulp.task('cssPrepMihru', function() {
+	gulp.src(devCss + 'style.css')
+		.pipe(postcss([
+			precss(),
+			autoprefixer(),
+			cssnano()
+	]))
+	.on('error', gutil.log)
+		.pipe(gulp.dest(themeDirectory))
+		.pipe(livereload());
+});
+
+//concatinate & minify & rename javascript
+gulp.task('jsConcatMihru', function(){
+	gulp.src(devJs + '*.js')
+		.pipe(concat('script.js'))
+		.pipe(uglify())
+		.pipe(rename({suffix: '.min'}))
+		.pipe(gulp.dest(themeDirectory + '/j'))
+		.pipe(livereload());
+});
+
+//watch & process
+gulp.task('watchMihru', function() {
+	gulp.watch(devTpl + '**/*.php', ['tplCp']);
+	gulp.watch(devPlg + '**/*.php', ['plgCp']);
+	gulp.watch(devCss + '**/*.css', ['cssPrep']);	
+	gulp.watch(devJs + '*.js', ['jsConcat']);
+});
+
+gulp.task( 'default', [ 'tplCpMihru', 'plgCpMihru', 'cssPrepMihru', 'jsConcatMihru', 'watchMihru' ] );
