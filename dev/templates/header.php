@@ -52,7 +52,7 @@
 					</li>
 					<li>
 						<a href="?route=custom/contacts">
-							<img class="logo" src="<?php bloginfo( template_directory); ?>/is/icon-mobile-contacts.svg">
+							<img class="logo" src="<?php bloginfo( template_directory); ?>/i/icon-mobile-contacts.svg">
 							Контакты
 						</a>
 					</li>
