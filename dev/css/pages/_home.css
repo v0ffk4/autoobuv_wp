@@ -1,13 +1,13 @@
 .homepage-banner {
 	height: 100vh;
-	background-image: url(/catalog/view/theme/autoobuv/image/bcg-clouds.jpg);
+	background-image: url(i/bcg-clouds.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
 .homepage-banner-content {
-	background-image:  url(/catalog/view/theme/autoobuv/image/bcg-build-01.png), url(/catalog/view/theme/autoobuv/image/bcg-build-02.png),  url(/catalog/view/theme/autoobuv/image/bcg-build-03.png);
+	background-image:  url(i/bcg-build-01.png), url(i/bcg-build-02.png),  url(i/bcg-build-03.png);
 	background-position: bottom left, bottom center, bottom right;
 	background-repeat: no-repeat, no-repeat, no-repeat;
 	height: 100%;
