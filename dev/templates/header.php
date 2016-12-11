@@ -27,31 +27,31 @@
 			<nav class="nav-main">
 				<ul>
 					<li>
-						<a href="?route=custom/about">
+						<a href="/о-нас">
 							<img class="logo" src="<?php bloginfo( template_directory); ?>/i/icon-mobile-about.svg">
 							О нас
 						</a>
 					</li>
 					<li>
-						<a href="?route=custom/category">
+						<a href="/каталог">
 							<img class="logo" src="<?php bloginfo( template_directory); ?>/i/icon-mobile-catalogue.svg">
 							Товары
 						</a>
 					</li>
 					<li>
-						<a href="?route=custom/item">
+						<a href="/услуги">
 							<img class="logo" src="<?php bloginfo( template_directory); ?>/i/icon-mobile-services.svg">
 							Услуги
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="/сервис">
 							<img class="logo" src="<?php bloginfo( template_directory); ?>/i/icon-mobile-repair.svg">
 							Сервис
 						</a>
 					</li>
 					<li>
-						<a href="?route=custom/contacts">
+						<a href="/контакты">
 							<img class="logo" src="<?php bloginfo( template_directory); ?>/i/icon-mobile-contacts.svg">
 							Контакты
 						</a>
